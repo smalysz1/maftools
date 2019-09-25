@@ -418,7 +418,7 @@ oncoplot = function(maf, top = 20, genes = NULL, mutsig = NULL, mutsigQval = 0.1
     nm_temp[amp_idx] = 0
     image(x = 1:nrow(nm_temp), y = 1:ncol(nm_temp), z = nm_temp, axes = FALSE, xaxt="n",
           yaxt="n", xlab="", ylab="", col = bgCol, add = TRUE)
-    points(amp_idx, pch= 15, col= vc_col['Amp'], cex = 1.5)
+    points(amp_idx, pch= 15, col= vc_col['Amp'], cex = 3)
   }
 
   if(nrow(del_idx) > 0){
@@ -426,7 +426,7 @@ oncoplot = function(maf, top = 20, genes = NULL, mutsig = NULL, mutsigQval = 0.1
     nm_temp[del_idx] = 0
     image(x = 1:nrow(nm_temp), y = 1:ncol(nm_temp), z = nm_temp, axes = FALSE, xaxt="n",
           yaxt="n", xlab="", ylab="", col = bgCol, add = TRUE)
-    points(del_idx, pch= 15, col= vc_col['Del'], cex = 1.5)
+    points(del_idx, pch= 15, col= vc_col['Del'], cex = 3)
   }
 
   #Draw if any additional features are requested
